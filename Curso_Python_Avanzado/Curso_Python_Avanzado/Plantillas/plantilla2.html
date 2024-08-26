@@ -1,0 +1,22 @@
+
+<html>
+    <body>
+        {% include "Barra.html" %}
+        <h1 style="color: blue;">
+            <p>La Fecha: {{fechaactual.date}}</p> 
+            <p>La Hora: {{fechaactual.hour}}:{{fechaactual.minute}}</p>
+            <p>El nombre es: {{Nombre}}</p>
+            <p>El apellido es: {{Apellido}}</p>
+            <p>La edad es: {{Edad}}</p>
+            {% if Temas %}
+                <ul>
+                {% for indice in Temas %}
+                    <li> El Tema {{indice}} </li>
+                {% endfor %}
+                </ul>
+            {% else %}
+                La lista esta vacia
+            {% endif %}
+        </h1>
+    </body>
+</html>
